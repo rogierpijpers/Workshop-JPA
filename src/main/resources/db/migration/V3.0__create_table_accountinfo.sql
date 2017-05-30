@@ -3,7 +3,6 @@ CREATE TABLE account_info(
   id BIGINT NOT NULL AUTO_INCREMENT,
   street VARCHAR(255) NOT NULL,
   telephone_number VARCHAR(16) NOT NULL,
-
   PRIMARY KEY(id)
 );
 

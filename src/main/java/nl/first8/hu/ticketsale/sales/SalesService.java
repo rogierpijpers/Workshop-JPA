@@ -45,7 +45,12 @@ public class SalesService {
         sale.setPrice(price);
         sale.setSellDate(timestamp);
 
+        AuditTrail audit = new AuditTrail();
+        audit.setSale(sale);
+        audit.setAccount(account);
+
         salesRepository.insert(sale);
+        salesRepository.insertAudit(audit);
     }
 
     public Optional<Sale> getSale(Long accountId, Long concertId) {
